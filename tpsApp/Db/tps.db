@@ -1,0 +1,22 @@
+record(ai, "$(P):PRESSURE") {
+  field(DESC, "Pressure")
+  field(DTYP, "stream")
+  field(INP,  "@tps.proto getPressure $(PORT)")  
+  field(EGU,  "Torr")
+  field(PREC, "1")
+  field(HIHI, "1E-5")
+  field(HIGH, "5E-6")
+  field(LOW,  "1E-8")
+  field(LOLO, "1E-9")
+  field(HHSV, "MAJOR")
+  field(HSV,  "MINOR")
+  field(LSV,  "NO_ALARM")
+  field(LLSV, "NO_ALARM")
+  field(SCAN, "1 second")
+  #field(PINI, "1")
+}
+record(stringout, "$(P):IOC") {
+  field(DESC, "$(DESC)")
+  field(VAL,  "$(IOC)")
+  field(PINI, "1")
+}
